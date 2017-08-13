@@ -5,11 +5,14 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
+    // Link to our api, pointing to localhost
+    API = 'http://localhost:3000/api';
+
     constructor(private _http: Http) {
     }
-
-    get () {
-        return this._http.get('assets/albums.json').map(res => res.json());
+    // get data from API
+    getApiData(apiUrl: string) {
+        return this._http.get(apiUrl).map(res => res.json());
     }
 
 }

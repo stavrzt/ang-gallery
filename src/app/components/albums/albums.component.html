@@ -1,10 +1,8 @@
 <div>
-    albums works!
-
     <ul>
-        <li *ngFor='let fa of serviceData | async'>
-            {{ fa }}
+        <li *ngFor='let albumData of serviceData | async'>
+            <img src="" alt="{{albumData.thumbnail}}">
+            <a [routerLink]="['/albums', albumData.id]">{{ albumData.title }}</a>
         </li>
     </ul>
-
 </div>

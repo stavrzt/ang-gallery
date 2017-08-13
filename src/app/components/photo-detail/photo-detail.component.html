@@ -1,3 +1,12 @@
-<p>
-  photo-detail works!
-</p>
+<div>
+    <ul>
+        <li *ngFor='let photoDetailData of serviceData | async'>
+            <hr>
+            <hr>
+            <hr>
+            <a [routerLink]="['/photo', photoDetailData.id]">
+                <h2>{{photoDetailData.title}}</h2>
+            </a>
+        </li>
+    </ul>
+</div>

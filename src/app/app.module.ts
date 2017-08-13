@@ -13,12 +13,12 @@ import {RouterModule, Routes} from '@angular/router';
 
 const appRoutes: Routes = [
     {path: 'users', component: UsersComponent},
-    {path: 'albums', component: AlbumsComponent},
-    {path: 'photo-list', component: PhotoListComponent},
-    {path: 'photo-detail', component: PhotoDetailComponent},
+    {path: 'users/:user_id/albums', component: AlbumsComponent},
+    {path: 'albums/:album_id', component: PhotoListComponent},
+    {path: 'photo/:photo_id', component: PhotoDetailComponent},
     {
-        path: '**',
-        redirectTo: 'albums',
+        path: '*',
+        redirectTo: 'users',
         pathMatch: 'full'
     }
 ];

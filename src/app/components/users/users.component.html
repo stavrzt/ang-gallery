@@ -1,3 +1,7 @@
-<p>
-  users works!
-</p>
+<div>
+    <ul>
+        <li *ngFor='let userData of serviceData | async'>
+            <a [routerLink]="['/users', userData.id, 'albums']">{{userData.email}}</a>
+        </li>
+    </ul>
+</div>
